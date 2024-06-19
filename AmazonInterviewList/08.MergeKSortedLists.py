@@ -16,15 +16,16 @@ class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         head = None
         tail = None
-        emptyList = [None] * len(lists)
-        while lists != emptyList:
+        listsCopy = lists.copy()
+        emptyList = [None] * len(listsCopy)
+        while listsCopy != emptyList:
             minVal = (10**4 + 1)
             minHead = None
-            for index, currHead in enumerate(lists):
+            for index, currHead in enumerate(listsCopy):
                 if currHead is not None and currHead.val < minVal:
                     minVal = currHead.val
                     minHead = index
-            lists[minHead] = lists[minHead].next
+            listsCopy[minHead] = listsCopy[minHead].next
             newNode = ListNode(minVal)
             if head is None:
                 head = newNode
