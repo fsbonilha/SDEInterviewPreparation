@@ -19,4 +19,3 @@ class Solution:
                 left = right
             right += 1
         return maxProfit
-            
