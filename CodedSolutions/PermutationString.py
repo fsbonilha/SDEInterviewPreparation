@@ -9,17 +9,17 @@ class Solution:
         right = length - 1
         countsS1 = {}
 
-        self.addLetterToDict(s1, countsS1)
+        self.addFreqsToDict(s1, countsS1)
 
         while right < len(s2):
             countsS2 = {}
-            self.addLetterToDict(s2[left:right+1], countsS2)
+            self.addFreqsToDict(s2[left:right+1], countsS2)
             if countsS2 == countsS1:
                 return True
             left += 1
             right += 1
         return False
 
-    def addLetterToDict(self, word: str, dictionary: dict):
+    def addFreqsToDict(self, word: str, dictionary: dict):
         for letter in word:
             dictionary[letter] = 1 + dictionary.get(letter, 0)
