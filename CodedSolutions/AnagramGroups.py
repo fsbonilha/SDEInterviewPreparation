@@ -3,8 +3,11 @@
 # Developed Solution: NeetCode
 
 # Complexity: O(n * m)
-# n = # of words 
+# n = # of words
 # m = average size of word
+
+from typing import List
+
 
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:

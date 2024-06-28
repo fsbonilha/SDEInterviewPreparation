@@ -1,5 +1,8 @@
 # Source: https://neetcode.io/problems/two-integer-sum-ii
 
+from typing import List
+
+
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         start = 0

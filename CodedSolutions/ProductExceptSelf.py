@@ -1,4 +1,9 @@
+# Problem: Product Except Self
+
 # Source: https://neetcode.io/problems/products-of-array-discluding-self
+
+from typing import List
+
 
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:

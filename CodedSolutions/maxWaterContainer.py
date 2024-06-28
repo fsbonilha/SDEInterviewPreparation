@@ -11,6 +11,8 @@
 # capacity for that height can't get any bigger, so we can skip
 # this specific height, so we keep skipping always the smaller
 # height.
+from typing import List
+
 
 class Solution:
     def maxArea(self, heights: List[int]) -> int:

@@ -2,6 +2,9 @@
 
 # Source: https://neetcode.io/problems/three-integer-sum
 
+from typing import List
+
+
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
         triplets = []
@@ -12,7 +15,7 @@ class Solution:
         for index in range(length - 2):
             if sortedNums[index] > 0:
                 break
-            
+
             if index > 0 and sortedNums[index] == sortedNums[index - 1]:
                 continue
 
@@ -25,9 +28,12 @@ class Solution:
                 elif nsum < 0:
                     start += 1
                 else:
-                    triplets.append([sortedNums[index], sortedNums[start], sortedNums[end]])
+                    triplets.append([sortedNums[index],
+                                     sortedNums[start],
+                                     sortedNums[end]])
                     start += 1
                     end -= 1
-                    while sortedNums[start] == sortedNums[start - 1] and start < end:
+                    while (sortedNums[start] == sortedNums[start - 1]
+                           and start < end):
                         start += 1
         return triplets

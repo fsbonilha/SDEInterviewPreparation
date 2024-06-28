@@ -1,4 +1,9 @@
+# Problem: String Encode and Decode
+
 # Source: https://neetcode.io/problems/string-encode-and-decode 
+
+from typing import List
+
 
 class Solution:
 

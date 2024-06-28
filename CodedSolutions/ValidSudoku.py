@@ -1,6 +1,9 @@
-# Source: 
+# Source:
 # https://leetcode.com/problems/valid-sudoku/
 # https://neetcode.io/problems/valid-sudoku
+
+from typing import List
+
 
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
