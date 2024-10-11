@@ -32,6 +32,6 @@ def horseMoves(position: List[int], grid: List[List[int]]) -> List[int]:
     for move_row, move_col in possible_moves:
         new_row = position[0] + move_row
         new_col = position[1] + move_col
-        if new_row < rows and new_col < cols and grid[new_row][new_col] != 1:
+        if 0 <= new_row < rows and 0 <= new_col < cols and grid[new_row][new_col] != 1:
             result.append([new_row, new_col])
     return result
